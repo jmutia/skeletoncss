@@ -1,0 +1,83 @@
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+flexbox
+> easy and clean way to arrange items within a container
+> flex container margins do not collapse with the margin of its contents
+> order of elements can be easily changed
+
+*block - vertical biased
+*in-line - horizontal biased
+
+properties:
+
+-container element
+display: flex | inline-flex 
+
+-direction
+flex-direction : row | column
+
+-wrapped content
+flex-wrap : wrap | nowrap | wrapreverse 
+
+-width to each flex item
+flex-basis : <length>
+
+-alignment
+justify-content : flex-start | flex-end | center
+
+align-self : flex-start | flex-end | center
+align-items : flex-start | flex-end | center 
+align-content: flex-start | flex-end | center
+
+overflow : hidden /*for content to not overflow inside a container*/	
+box-sizing : border-box /*for content to not collapse inside a container*/	
+
+*sample html + css code
+<div class="container-1>
+<div class="box-1 box"></div>
+<div class="box-1 box"></div>
+<div class="box-1 box"></div>
+</div>
+
+
+.container-1 div {
+border: 1px solid #dcdcdc;
+padding: 10px;
+}
+
+.container-1 {
+display: flex;
+align-items: flex-end; *align child item elements
+justify-content: space-between *align content items
+flex-wrap: wrap
+}
+.container-1 box{
+width: 25%;	
+flex-basis: 25% /*same as assigning 25% width to the flex-items*/
+}
+
+.box-1 box{
+flex:2; /*spans width of flex-item*/
+order:2;
+}
+.box-2 box{
+flex:1;
+order:1;
+}
+.box-3 box{
+flex:3;
+order:3;
+}
+
+
+*media queries
+@media(min-wdth: 468px){
+.container-1 {
+display: flex;
+align-items: flex-end; *align child item elements
+justify-content: space-between *align content items
+}
+}
+
+
+
