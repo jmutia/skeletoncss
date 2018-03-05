@@ -22,7 +22,7 @@ body {
 
 /*---showcase styles---*/
 #showcase {
-  background: url("../images/skeleton-showcasebg.jpg");
+  background-color: #e0f2f1;
   height: 400px;
 }
 
